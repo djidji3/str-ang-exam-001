@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeroesComponent } from './pages/heroes/heroes.component';
 import {RouterModule,Routes} from '@angular/router';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SortingPipe } from './pipes/sorting.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     NavComponent,
     HomeComponent,
     HeroesComponent,
-    FilterPipe
+    FilterPipe,
+    SortingPipe
   ],
   imports: [
     BrowserModule,

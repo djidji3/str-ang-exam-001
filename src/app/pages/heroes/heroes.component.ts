@@ -11,6 +11,7 @@ import { HeroService } from 'src/app/service/hero.service';
 export class HeroesComponent implements OnInit {
 
   szuroKifejezes : string = '';
+  sortBy : string = '';
 
   heroList$ : BehaviorSubject<Hero[]> = this.heroService.heroList$;
 
