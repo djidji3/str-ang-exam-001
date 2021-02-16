@@ -1,0 +1,29 @@
+<div class="row mt-5">
+    <div class="input-group mb-3 col-6 offset-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Szűrés név alapján</span>
+        </div>
+        <input [(ngModel)]="szuroKifejezes" type="text" class="form-control">
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-12">
+        <!--   {{heroList$ | json }} -->
+        <table class="table table-striped">
+            <thead>
+                <th>#</th>
+                <th>Név</th>
+                <th>Tulajdonság</th>
+                <th>Cím</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroList$ | async | filter : 'name':szuroKifejezes ">
+                    <td>{{hero.id}}</td>
+                    <td>{{hero.name}}</td>
+                    <td>{{hero.superPower}}</td>
+                    <td>{{hero.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
